@@ -1,95 +1,135 @@
 {
-  "schema_version": "2.0",
+  "schema_version": 1,
   "feature_id": "F0035",
   "feature_slug": "session-continuity-and-token-refresh",
   "run_id": "2026-05-24-c92b16b6",
-  "run_folder": "/mnt/c/Users/gajap/sandbox/nebula/nebula-insurance-crm/planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6",
-  "evidence_root": "/mnt/c/Users/gajap/sandbox/nebula/nebula-insurance-crm/planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh",
-  "status": "draft",
-  "created_at": "2026-05-24T01:10:50.035141-04:00",
-  "updated_at": "2026-05-24T01:10:50.035141-04:00",
+  "status": "in-progress",
+  "recorded_on": "2026-05-24",
+  "contract_effective_date": "2026-05-19",
+  "feature_path_at_run_start": "planning-mds/features/F0035-session-continuity-and-token-refresh",
+  "feature_path_at_closeout": null,
+  "feature_state": "In Progress",
   "rerun_of": null,
-  "run_id_prior": null,
   "mode": "clean",
   "slice_order_source": "assembly-plan",
-  "feature_path": "/mnt/c/Users/gajap/sandbox/nebula/nebula-insurance-crm/planning-mds/features/F0035-session-continuity-and-token-refresh",
-  "archive_feature_path": "/mnt/c/Users/gajap/sandbox/nebula/nebula-insurance-crm/planning-mds/features/archive/F0035-session-continuity-and-token-refresh",
-  "feature_path_at_closeout": null,
-  "feature_state": null,
-  "scope": {
-    "frontend_in_scope": false,
-    "runtime_bearing": false,
-    "deployment_config_changed": false,
-    "security_sensitive_scope": false
+  "changed_paths": [
+    "planning-mds/features/F0035-session-continuity-and-token-refresh/feature-assembly-plan.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/README.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/action-context.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/artifact-trace.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/gate-decisions.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/g0-assembly-plan-validation.md",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/evidence-manifest.json",
+    "planning-mds/operations/evidence/F0035-session-continuity-and-token-refresh/2026-05-24-c92b16b6/artifacts/diffs/changed-files.txt"
+  ],
+  "scm": {
+    "base_ref": "main",
+    "head_ref": "feature/F0035-session-continuity-and-token-refresh",
+    "diff_artifact": "artifacts/diffs/changed-files.txt"
   },
-  "changed_paths": [],
+  "runtime_bearing": true,
+  "deployment_config_changed": false,
+  "frontend_in_scope": true,
+  "security_sensitive_scope": true,
+  "required_roles": [
+    "Quality Engineer",
+    "Code Reviewer",
+    "Security Reviewer",
+    "DevOps"
+  ],
   "gate_results": {
-    "G0": {
-      "status": "pending",
-      "evidence": null
+    "assembly_plan_validation": {
+      "required": true,
+      "result": "PASS",
+      "artifact": "g0-assembly-plan-validation.md"
     },
-    "G1": {
-      "status": "pending",
-      "evidence": null
+    "runtime_preflight": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     },
-    "G2": {
-      "status": "pending",
-      "evidence": null
+    "self_review": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     },
-    "G3": {
-      "status": "pending",
-      "evidence": null
+    "deployability": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     },
-    "G4.5": {
-      "status": "pending",
-      "evidence": null
+    "signoff": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     },
-    "G4.6": {
-      "status": "pending",
-      "evidence": null
+    "pm_closeout": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     },
-    "closeout": {
-      "status": "pending",
-      "evidence": null
+    "tracker_sync": {
+      "required": true,
+      "result": "PENDING",
+      "artifact": null
     }
   },
   "role_results": {
-    "architect": {
+    "Quality Engineer": {
       "required": true,
-      "status": "pending",
-      "evidence": null
+      "result": "PENDING",
+      "required_artifacts": [
+        "test-plan.md",
+        "test-execution-report.md",
+        "coverage-report.md"
+      ],
+      "verdict_artifact": null
     },
-    "quality-engineer": {
+    "Code Reviewer": {
       "required": true,
-      "status": "pending",
-      "evidence": null
+      "result": "PENDING",
+      "required_artifacts": [
+        "code-review-report.md"
+      ],
+      "verdict_artifact": null
     },
-    "code-reviewer": {
+    "Security Reviewer": {
       "required": true,
-      "status": "pending",
-      "evidence": null
+      "result": "PENDING",
+      "required_artifacts": [
+        "security-review-report.md"
+      ],
+      "verdict_artifact": null
     },
-    "security-reviewer": {
+    "DevOps": {
+      "required": true,
+      "result": "PENDING",
+      "required_artifacts": [
+        "g1-runtime-preflight.md",
+        "deployability-check.md"
+      ],
+      "verdict_artifact": null
+    },
+    "Architect": {
       "required": false,
-      "status": "omitted",
-      "evidence": null
-    },
-    "devops": {
-      "required": false,
-      "status": "omitted",
-      "evidence": null
-    },
-    "product-manager": {
-      "required": true,
-      "status": "pending",
-      "evidence": null
+      "result": "PASS",
+      "required_artifacts": [
+        "g0-assembly-plan-validation.md"
+      ],
+      "verdict_artifact": "g0-assembly-plan-validation.md"
     }
   },
-  "files": {},
-  "omissions": [],
-  "scm": {
-    "diff_artifact": null,
-    "changed_files": []
+  "files": {
+    "readme": "README.md",
+    "action_context": "action-context.md",
+    "artifact_trace": "artifact-trace.md",
+    "gate_decisions": "gate-decisions.md",
+    "commands_log": "commands.log",
+    "lifecycle_gates_log": "lifecycle-gates.log",
+    "assembly_plan_validation": "g0-assembly-plan-validation.md",
+    "diff_artifact": "artifacts/diffs/changed-files.txt"
   },
-  "waivers": {}
+  "omissions": [],
+  "waivers": {},
+  "global_evidence_refs": {}
 }
