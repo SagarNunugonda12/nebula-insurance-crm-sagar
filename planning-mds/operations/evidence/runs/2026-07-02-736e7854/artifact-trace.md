@@ -64,6 +64,10 @@
 - Added a local-development retry guard in `experience/src/services/api.ts` so `/carrier-markets` invalid-token responses retry once with the deterministic dev token before forced reauth.
 - Restarted the stale Vite dev server on port `5173`; the restarted proxy returned `200` with the three F0028 demo markets.
 
+## Reference Notes — 2026-07-03
+
+- Added `planning-mds/features/archive/F0028-carrier-and-market-relationship-management/reference_notes_F0028.md` as a read-only handoff summary from initial F0028 harness setup through sample verification scenarios.
+
 ## External Or Global Evidence References
 
 - Runtime smoke checks used local Docker Compose services for db, Authentik, and API.
