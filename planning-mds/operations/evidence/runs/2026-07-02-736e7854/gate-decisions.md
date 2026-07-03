@@ -15,3 +15,11 @@
 | G8 | APPROVED WITH RECOMMENDATIONS | Product Manager | 2026-07-02T20:51:00+05:30 | F0028 is complete for CRM-side carrier and market relationship management; remaining recommendations are non-blocking maintenance items. | No | Keep dependency and full regression follow-ups outside F0028 closeout. |
 
 Decisions: `PASS`, `PASS WITH RECOMMENDATIONS`, `FAIL`, `SKIP`, `APPROVED`, `APPROVED WITH RECOMMENDATIONS`. Blocking values: `Yes` / `No`.
+
+## Post-Closeout Defect Fix — 2026-07-03
+
+- **Decision:** APPROVED FOR TESTING
+- **Decider:** Codex using nebula-agents-sagar harness evidence path
+- **Rationale:** Fixed local dev invalid-token reproduction by defaulting unset Vite dev auth to the deterministic dev token path and by seeding deterministic F0028 demo markets for contributor reproducibility.
+- **Blocking:** No
+- **Validation:** Backend build, frontend build, focused frontend auth/API tests, focused F0028 backend endpoint tests, live local proxy `/carrier-markets` smoke check, KG symbol/drift checks, feature evidence validator, and template validator passed. Existing package/KG warnings remain non-blocking.

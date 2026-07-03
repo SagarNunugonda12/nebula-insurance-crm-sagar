@@ -55,6 +55,13 @@
 - Refreshed KG coverage report at `planning-mds/knowledge-graph/coverage-report.yaml`
 - Archive correction moved feature planning artifacts to `planning-mds/features/archive/F0028-carrier-and-market-relationship-management/`.
 
+## Post-Closeout Defect Fix — 2026-07-03
+
+- Fixed local development auth reproducibility for F0028 Markets by centralizing auth-mode resolution in `experience/src/features/auth/authMode.ts`.
+- Local Vite development now falls back to dev auth when `VITE_AUTH_MODE` is unset, preventing stale OIDC browser sessions from sending invalid bearer tokens to `/carrier-markets`.
+- Added idempotent F0028 carrier-market demo fixtures to `engine/src/Nebula.Infrastructure/Persistence/DevSeedData.cs` so fresh and existing development databases converge on visible sample markets.
+- Verified `/carrier-markets` through the local frontend proxy with a synthetic dev bearer token returned `200` and three demo markets.
+
 ## External Or Global Evidence References
 
 - Runtime smoke checks used local Docker Compose services for db, Authentik, and API.
